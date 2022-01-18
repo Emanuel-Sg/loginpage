@@ -1,13 +1,7 @@
 <?php
-include('banco.php');
+require_once "..\banco.php";
 
 if (isset($_POST['email']) || isset($_POST['senha'])) {
-
-    if (strlen($_POST['email']) == 0) {
-        echo "Preencha seu e-mail";
-    } else if (strlen($_POST['senha']) == 0) {
-        echo "Preencha sua senha";
-    } else {
 
         $email = $mysqli->real_escape_string($_POST['email']);
         $senha = $mysqli->real_escape_string($_POST['senha']);
@@ -33,7 +27,6 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             echo "Falha ao logar! E-mail ou senha incorretos";
         }
     }
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -59,19 +52,19 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
             <!-- Icon -->
             <div class="fadeIn first">
-                <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+                <img src="..\assets\usuarioicon.png" id="icon" alt="User Icon" />
             </div>
 
             <!-- Login Form -->
             <form action="" method="POST">
-                <input type="text" id="login" class="fadeIn second" name="email" placeholder="login">
-                <input type="text" id="password" class="fadeIn third" name="senha" placeholder="password">
-                <input type="submit" class="fadeIn fourth" value="Log In">
+                <input type="text" id="login" class="fadeIn second" name="email" placeholder="E-mail" required>
+                <input type="text" id="password" class="fadeIn third" name="senha" placeholder="Senha" required>
+                <input type="submit" class="fadeIn fourth" value="LogIn">
             </form>
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <a class="underlineHover" href="#">Esqueceu a sua senha?</a>
+                <a class="underlineHover" href="cadastro.php">Cadastro</a>
             </div>
 
         </div>

@@ -235,6 +235,8 @@ input[type=text]:placeholder {
     -webkit-animation-delay: 0.4s;
     -moz-animation-delay: 0.4s;
     animation-delay: 0.4s;
+    width: 30%;
+    margin-top: 3%;
 }
 
 .fadeIn.second {
@@ -285,5 +287,23 @@ input[type=text]:placeholder {
 }
 
 #icon {
-    width: 60%;
+    width: 35%;
+    height: 5%;
+}
+
+#container{
+    
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        padding: 30px;
+        width: 90%;
+        max-width: 450px;
+        position: relative;
+        padding: 0px;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+        text-align: center;
+    
+    
 }
